@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>909</width>
+    <height>543</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>381</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Light">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>39</red>
+          <green>177</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="BrightText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Light">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>39</red>
+          <green>177</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="BrightText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Light">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>120</red>
+          <green>120</green>
+          <blue>120</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="BrightText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>240</red>
+          <green>240</green>
+          <blue>240</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="font">
+     <font>
+      <family>Courier</family>
+     </font>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="plainText">
+     <string>####################################################
+#                                                  #
+#                                                  #
+#                                                  #
+#                                                  #
+#                                                  #
+#                                                  #
+#                                                  #
+#                                                  #
+#                                                  #
+#                                                  #
+#                                                  #
+#                                                  #
+#                                                  #
+#                                                  #
+#                                                  #
+#                                                  #
+#                                                  #
+####################################################</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>290</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
