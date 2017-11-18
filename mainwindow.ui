@@ -152,6 +152,9 @@
     <property name="horizontalScrollBarPolicy">
      <enum>Qt::ScrollBarAlwaysOff</enum>
     </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
     <property name="plainText">
      <string>####################################################
 #                                                  #
@@ -169,7 +172,7 @@
 #                                                  #
 #                                                  #
 #                                                  #
-#                                                  #
+#                    TTTTTTTTT                     #
 #                                                  #
 ####################################################</string>
     </property>
@@ -186,6 +189,9 @@
     <property name="text">
      <string>PushButton</string>
     </property>
+    <property name="shortcut">
+     <string>A</string>
+    </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
@@ -198,6 +204,9 @@
     </property>
     <property name="text">
      <string>PushButton</string>
+    </property>
+    <property name="shortcut">
+     <string>D</string>
     </property>
    </widget>
   </widget>
