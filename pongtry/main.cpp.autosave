@@ -28,7 +28,10 @@ int main(int argc, char *argv[])
     testData = fann_read_train_from_file(IRIS_DATA_TEST_FILE);
 
     network = fann_create_standard(layersNum, trainData->num_input, hiddenNeuronsNum1, trainData->num_output);
-
+    fann_set_training_algorithm(network, FANN_TRAIN_INCREMENTAL);
+    fann_set_activation_function_hidden(network, FANN_SIGMOID);
+    
+     
 
     w.show();
 
