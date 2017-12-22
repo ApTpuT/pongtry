@@ -28,12 +28,17 @@ public:
     QPlainTextEdit *plainTextEdit;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_4;
+    QPushButton *pushButton_5;
+    QPlainTextEdit *plainTextEdit_2;
+    QPushButton *pushButton_6;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(909, 543);
+        MainWindow->resize(747, 443);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         plainTextEdit = new QPlainTextEdit(centralWidget);
@@ -73,6 +78,21 @@ public:
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
         pushButton_2->setGeometry(QRect(210, 290, 171, 41));
+        pushButton_3 = new QPushButton(centralWidget);
+        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pushButton_3->setGeometry(QRect(10, 330, 171, 41));
+        pushButton_4 = new QPushButton(centralWidget);
+        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+        pushButton_4->setGeometry(QRect(210, 330, 101, 41));
+        pushButton_5 = new QPushButton(centralWidget);
+        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
+        pushButton_5->setGeometry(QRect(310, 330, 71, 41));
+        plainTextEdit_2 = new QPlainTextEdit(centralWidget);
+        plainTextEdit_2->setObjectName(QStringLiteral("plainTextEdit_2"));
+        plainTextEdit_2->setGeometry(QRect(400, 0, 341, 401));
+        pushButton_6 = new QPushButton(centralWidget);
+        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
+        pushButton_6->setGeometry(QRect(10, 370, 371, 41));
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
@@ -103,10 +123,14 @@ public:
 "#                                                  #\n"
 ""
                         "####################################################", 0));
-        pushButton->setText(QApplication::translate("MainWindow", "PushButton", 0));
+        pushButton->setText(QApplication::translate("MainWindow", "LEFT", 0));
         pushButton->setShortcut(QApplication::translate("MainWindow", "A", 0));
-        pushButton_2->setText(QApplication::translate("MainWindow", "PushButton", 0));
+        pushButton_2->setText(QApplication::translate("MainWindow", "RIGHT", 0));
         pushButton_2->setShortcut(QApplication::translate("MainWindow", "D", 0));
+        pushButton_3->setText(QApplication::translate("MainWindow", "NN control", 0));
+        pushButton_4->setText(QApplication::translate("MainWindow", "Train", 0));
+        pushButton_5->setText(QApplication::translate("MainWindow", "Foget", 0));
+        pushButton_6->setText(QApplication::translate("MainWindow", "Pause", 0));
     } // retranslateUi
 
 };

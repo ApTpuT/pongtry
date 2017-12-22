@@ -4,9 +4,14 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QTime>
+#include <QApplication>
+#include <mainwindow.h>
+#include"helpers.h"
+#include"net.h"
 
 namespace Ui {
 class MainWindow;
+
 }
 
 class MainWindow : public QMainWindow
@@ -14,12 +19,20 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+
     explicit MainWindow(QWidget *parent = 0);
     QTimer *tmr;
     int way;
     int curline;
-    int curpos;
-
+     int curpos;
+    double learnRate;
+   int plapos;
+    bool typecont;
+    int lastval;
+    QList <double> initWeights;
+    QList <double> finalWeights;
+    Helpers Helper;
+    BackPropNeuralNet bnn=BackPropNeuralNet(3, 4, 1);
 
     ~MainWindow();
 
@@ -31,9 +44,13 @@ private:
 
 
 private slots:
+
+    void TimeStop();
+    void Create();
  void RShift();
  void LShift();
   void updateTime();
+  void IIC();
 };
 
 #endif // MAINWINDOW_H

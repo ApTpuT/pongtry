@@ -1,5 +1,5 @@
 #include "helpers.h"
-#include <QDebug>
+#include <qDebug>
 
 Helpers::Helpers()
 {
@@ -20,14 +20,14 @@ QList <QList<double>> Helpers::MakeMatrix(int rows, int cols)
 
 void Helpers::ShowVector(QList <double> vector, int decimals, int valsPerLine, bool blankLine)
    {
-     for (int i = 0; i < vector.length(); ++i)
+     /*for (int i = 0; i < vector.length(); ++i)
      {
        if (i > 0 && i % valsPerLine == 0) // max of 12 values per row
-         qDebug() << "";
-       if (vector[i] >= 0.0) qDebug() <<" ";
-       qDebug() <<QString::number(vector[i]); // n decimals
+         //qDebug() << "";
+       if (vector[i] >= 0.0) //qDebug() <<" ";
+       //qDebug() <<QString::number(vector[i]); // n decimals
      }
-     if (blankLine) qDebug() <<"\n";
+     if (blankLine) //qDebug() <<"\n";*/
    }
 
 void Helpers::ShowMatrix(QList <QList<double>> matrix, int numRows, int decimals)
@@ -38,13 +38,13 @@ void Helpers::ShowMatrix(QList <QList<double>> matrix, int numRows, int decimals
      {
        for (int j = 0; j < matrix[0].length(); ++j)
        {
-         if (matrix[i][j] >= 0.0) qDebug() <<" "; // blank space instead of '+' sign
-         qDebug() <<QString::number(matrix[i][j]);
+         //if (matrix[i][j] >= 0.0) //qDebug() <<" "; // blank space instead of '+' sign
+         //qDebug() <<QString::number(matrix[i][j]);
        }
-       qDebug() <<"";
+       //qDebug() <<"";
        ++ct;
      }
-     qDebug() <<"";
+     //qDebug() <<"";
    }
 
 double Helpers::Error(QList <double> tValues, QList <double> yValues)

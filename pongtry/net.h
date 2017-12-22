@@ -12,8 +12,6 @@ public:
     QList <double> ComputeOutputs(QList <double> xValues);
     void UpdateWeights(QList <double> tValues, double learn, double mom); // back-propagation
 
-
-
 private:
         int numInput;
         int numHidden;

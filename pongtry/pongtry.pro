@@ -16,15 +16,13 @@ TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
     helpers.cpp \
-    net.cpp \
-    neuron.cpp
+    net.cpp
 
 
 HEADERS += \
     mainwindow.h \
     helpers.h \
-    net.h \
-    neuron.h
+    net.h
 
 FORMS    += mainwindow.ui
 

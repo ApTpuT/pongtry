@@ -1,6 +1,7 @@
 #include "net.h"
+#include"mainwindow.h"
 #include<QApplication>
-#include<QDebug>
+#include<qDebug>
 
 BackPropNeuralNet::BackPropNeuralNet(int numInput, int numHidden, int numOutput)
 {
@@ -28,9 +29,9 @@ for (int i=0; i<numOutput; i++)
 
 
   ihWeights = Helper.MakeMatrix(numInput, numHidden);
-  qDebug() <<ihWeights[0].size();
+  //qDebug() <<ihWeights[0].size();
   hoWeights = Helper.MakeMatrix(numHidden, numOutput);
-  qDebug() <<hoWeights[0].size();
+  //qDebug() <<hoWeights[0].size();
   ihPrevWeightsDelta = Helper.MakeMatrix(numInput, numHidden);
   hoPrevWeightsDelta = Helper.MakeMatrix(numHidden, numOutput);
 }
@@ -39,16 +40,16 @@ void BackPropNeuralNet::SetWeights(QList <double> weights)
 {
   // assumes weights[] has order: input-to-hidden wts, hidden biases, hidden-to-output wts, output biases
   int numWeights = (numInput * numHidden) + (numHidden * numOutput) + numHidden + numOutput;
-  if (weights.length() != numWeights)
-   qDebug()<<"The weights array length: " << weights.length() <<
-      " does not match the total number of weights and biases: " << numWeights;
+  //if (weights.length() != numWeights)
+   //qDebug()<<"The weights array length: " << weights.length() <<
+      //" does not match the total number of weights and biases: " << numWeights;
 
   int k = 0; // points into weights param
 
   for (int i = 0; i < numInput; ++i)
     for (int j = 0; j < numHidden; ++j){
       ihWeights[i][j] = weights[k++];
-      qDebug()<<ihWeights[i][j];
+      //qDebug()<<ihWeights[i][j];
     }
 
 
@@ -70,7 +71,7 @@ QList <double> BackPropNeuralNet::GetWeights()
   int k = 0;
   for (int i = 0; i < ihWeights.length(); ++i)
     for (int j = 0; j < ihWeights[0].length()/numInput; ++j){
-      qDebug() <<ihWeights[0].length();
+      //qDebug() <<ihWeights[0].length();
       result << ihWeights[i][j];
 
     }
@@ -94,7 +95,7 @@ QList <double> BackPropNeuralNet::GetOutputs()
 QList <double> BackPropNeuralNet::ComputeOutputs(QList <double> xValues)
 {
   if (xValues.length() != numInput)
-    qDebug() << "Inputs array length " << inputs.length() << " does not match NN numInput value " << numInput;
+    //qDebug() << "Inputs array length " << inputs.length() << " does not match NN numInput value " << numInput;
 
   for (int i = 0; i < numHidden; ++i)
     hSums[i] = 0.0;
@@ -126,6 +127,7 @@ QList <double> BackPropNeuralNet::ComputeOutputs(QList <double> xValues)
 
  QList <double> result; // for convenience when calling method
   result=this->outputs;
+  //if (xValues[0]> xValues[2]) result[0]++;
   return result;
 } // ComputeOutputs
 
@@ -133,7 +135,7 @@ void BackPropNeuralNet::UpdateWeights(QList <double> tValues, double learn, doub
 {
   // assumes that SetWeights and ComputeOutputs have been called and so inputs and outputs have values
   if (tValues.length() != numOutput)
-    qDebug() <<"target values not same Length as output in UpdateWeights";
+    //qDebug() <<"target values not same Length as output in UpdateWeights";
 
   // 1. compute output gradients. assumes log-sigmoid!
   for (int i = 0; i < oGrads.length(); ++i)
@@ -151,7 +153,7 @@ void BackPropNeuralNet::UpdateWeights(QList <double> tValues, double learn, doub
       sum += oGrads[j] * hoWeights[i][j]; // each downstream gradient * outgoing weight
     hGrads[i] = derivative * sum; // hGrad = (1-O)(1+O) * E(oGrads*oWts)
   }
-    //qDebug() <<ihWeights.length();
+    ////qDebug() <<ihWeights.length();
   // 3. update input to hidden weights (gradients must be computed right-to-left but weights can be updated in any order)
   for (int i = 0; i < ihWeights.length(); ++i) // 0..2 (3)
   {
@@ -159,7 +161,7 @@ void BackPropNeuralNet::UpdateWeights(QList <double> tValues, double learn, doub
     for (int j = 0; j < ihWeights[0].length()/numInput; ++j) // 0..3 (4)
     {
       double delta = learn * hGrads[j] * inputs[i]; // compute the new delta = "eta * hGrad * input"
-      //qDebug() <<ihWeights[0].length();
+      ////qDebug() <<ihWeights[0].length();
       ihWeights[i][j] += delta; // update
       ihWeights[i][j] += mom * ihPrevWeightsDelta[i][j]; // add momentum using previous delta. on first pass old value will be 0.0 but that's OK.
       ihPrevWeightsDelta[i][j] = delta; // save the delta for next time
